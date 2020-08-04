@@ -10,25 +10,32 @@ import {
 
 const DatePicker = () => {
   const today = new Date();
-  today.getDay();
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+  //today.getDay();
+  today.getDate()
+  const [selectedDate, setSelectedDate] = React.useState(new Date(today));
 
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
+  const getDate = (date) =>{
+    console.log(date)
+   return  date
+   
+  }
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid container justify="space-around">
         <KeyboardDatePicker
           disableToolbar
           variant="inline"
-          format="MM/dd/yyyy"
+          format="dd/MM/yyyy"
           margin="normal"
           id="date-picker-inline"
           label="Date picker inline"
           value={selectedDate}
-          onChange={handleDateChange}
+          onChange={ e => {handleDateChange(e); getDate(e)}}
           KeyboardButtonProps={{
             "aria-label": "change date",
           }}
