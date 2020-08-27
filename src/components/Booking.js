@@ -7,10 +7,12 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import DatePicker from './DatePicker'
+import TimePickers from './TimePickers'
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
   KeyboardDatePicker,
+  TimePicker,
 }  from '@material-ui/pickers';
 
 
@@ -24,6 +26,7 @@ class Booking extends Component {
             <CssBaseline/>
             <Container>
             <DatePicker/>
+            <TimePickers/>
             <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '50vh' }} />
             </Container>
         </React.Fragment>
