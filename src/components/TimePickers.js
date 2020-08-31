@@ -14,9 +14,8 @@ import { useState } from "react";
 const TimePickers = () => {
 
     const date = new Date()
-    // console.log(date.getTime)
-    // const [time, setTime] = useState(date.getTime);
-    const [selectedDate, setSelectDate] = useState(new Date(date.getTime));
+    
+    const [selectedDate, setSelectDate] = useState(new Date(date.getTime()));
 
     const handleDateChange = (date) =>{
         setSelectDate(date)

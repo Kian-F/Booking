@@ -25,9 +25,11 @@ class Booking extends Component {
         <React.Fragment>
             <CssBaseline/>
             <Container>
-            <DatePicker/>
+           
+        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '50vh' }} >
+        <DatePicker/>
             <TimePickers/>
-            <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '50vh' }} />
+        </Typography>
             </Container>
         </React.Fragment>
         )
