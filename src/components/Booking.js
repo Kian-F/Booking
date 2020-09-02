@@ -8,7 +8,7 @@ import DateFnsUtils from "@date-io/date-fns";
 import DatePicker from "./DatePicker";
 import TimePickers from "./TimePickers";
 import NumberOfParty from "./NumberOfParty";
-
+import {makeStyles} from '@material-ui/core/styles'
 import Button from "@material-ui/core/Button";
 
 import {
@@ -18,13 +18,24 @@ import {
   TimePicker,
 } from "@material-ui/pickers";
 
+const useStyles = makeStyles((them)=>({
+  root:{
+    flexGrow:1,
+  }
+}))
+
 class Booking extends Component {
   constructor() {
     super();
+
   }
+ // const classes = useStyles();
+
 
   render() {
     return (
+    
+
       <form>
         <React.Fragment>
           <CssBaseline />
@@ -32,7 +43,7 @@ class Booking extends Component {
             <Typography
               component="div"
               style={{ backgroundColor: "#cfe8fc", height: "50vh" }}
-            >
+            ><div className='grid'>
               <Grid container spacing={12}>
                 <Grid item xs={3}>
                   <DatePicker />
@@ -49,6 +60,7 @@ class Booking extends Component {
                   </Button>
                 </Grid>
               </Grid>
+              </div>
             </Typography>
           </Container>
         </React.Fragment>
